@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Op";
+  src: url(/arquivos/OptimusPrinceps.ttf);
+}
+
+/* desktop */
+
+body {
+  background: linear-gradient(#fabb01, black);
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  font-size: 70px;
+  text-align: center;
+  color: black;
+  font-family: "Op";
+}
+
+hr {
+  margin: 0px auto;
+  background-color: black;
+  border: 5px solid;
+  width: 50%;
+}
+
+span {
+  color: #fabb01;
+}
+
+p {
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+  background-color: black;
+  border-radius: 5px;
+  padding: 30px;
+  color: white;
+}
+
+.btn {
+  padding: 10px;
+  display: inline-block;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: #fabb01;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #fabb01;
+  border: 1px solid #fabb01;
+  cursor: pointer;
+}
+.grid {
+  display: grid;
+  width: 1200px;
+  height: 1400px;
+  margin: 60px auto;
+  grid-template-columns: repeat(3, 270px);
+  gap: 5px;
+  border: 3px solid red;
+  justify-content: center;
+  align-content: start;
+}
+
+#box4 {
+  grid-column: 1/-1;
+}
+
+/* tablet */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 40px auto;
+    gap: 5px;
+  }
+
+  #box3 {
+    grid-column: 1/-1;
+  }
+
+  h1 {
+    margin: 2px auto;
+    font-size: 50px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  #box3 {
+    grid-column: 1/-1;
+  }
+
+  hr {
+    width: 80%;
+    height: 10px;
+    background: black;
+    border: none;
+  }
+
+  h1 {
+    margin: 2px auto;
+    font-size: 50px;
+  }
+}
